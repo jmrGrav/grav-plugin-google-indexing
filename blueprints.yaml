@@ -1,0 +1,42 @@
+name: Google Indexing
+slug: google-indexing
+type: plugin
+version: 1.0.0
+description: Automatically submit modified pages to the Google Indexing API using RS256 JWT and a Google Cloud service account.
+icon: google
+author:
+  name: Jm Rohmer
+  url: https://arleo.eu
+homepage: https://github.com/jmrGrav/grav-plugin-google-indexing
+demo: https://arleo.eu/fr/grav-plugin-google-indexing
+keywords: google, indexing api, seo, search console, jwt, service account
+bugs: https://github.com/jmrGrav/grav-plugin-google-indexing/issues
+docs: https://github.com/jmrGrav/grav-plugin-google-indexing/blob/main/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.7.0' }
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin activé
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    key_file:
+      type: text
+      label: Chemin du fichier JSON service account
+      default: '/etc/grav-google-indexing/service-account.json'
+
+    host:
+      type: text
+      label: Nom de domaine
+      default: 'arleo.eu'
