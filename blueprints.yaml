@@ -1,7 +1,7 @@
 name: Google Indexing
 slug: google-indexing
 type: plugin
-version: 1.0.0
+version: 1.0.1
 description: Automatically submit modified pages to the Google Indexing API using RS256 JWT and a Google Cloud service account.
 icon: google
 author:
